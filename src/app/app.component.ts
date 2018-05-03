@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { JoyrideService } from 'angular2-joyride';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  constructor(private readonly joyrideService: JoyrideService) {
+
+  }
+
+  onClick() {
+    this.joyrideService.startTour();
+  }
+
+
 }
